@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.ejs') %>
+        <link rel="stylesheet" href="/NavSheet.css">
+        <link rel="stylesheet" href="/ProductSheet.css">
+        <link rel="stylesheet" href="/ProductSheet.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <!-- Change to get from db -->
+        <title>Document</title>
+</head>
+
+<body>
+    <%- include('../partials/nav.ejs') %>
+        <div class="container">
+
+            <div class="product-info">
+
+                <div class="product-img">
+                    <%if(selectedProduct.image){%>
+                        <img src="../uploads/images/<%=selectedProduct.image%>" alt=" " style="width: 100%; height: 100%; border-radius: 10px 0 0 0; ">
+                        <%} else {%>
+                            <img src="../uploads/images/no_image.jpg" alt=" " style="width: 100%; height: 100%; border-radius: 10px 0 0 0; ">
+                            <%}%>
+                </div>
+
+
+                <div class="product-description">
+                    <h2 class="product-name-description">
+                        <%= selectedProduct.product %>
+                    </h2>
+                    <div class="desc-container">
+                        <%if(selectedProduct.desc){%>
+                            <p class="product-desc">
+                                <%=selectedProduct.desc%>
+                            </p>
+                            <%} else {%>
+                                <p class="product-desc">
+                                    Sorry there is nothing to view...
+                                </p>
+                                <%}%>
+
+                    </div>
+                    <div class="details-container">
+                        <h3 class="product-country-description">
+                            ctry:
+                            <%if(selectedProduct.country){%>
+                                <%=selectedProduct.country%>
+                                    <%} else {%>
+                                        Unknown
+                                        <%}%>
+                        </h3>
+                        <h2 class="product-price-description">
+                            <%if(selectedProduct.isDiscount === true){%>
+                                <%let newPrice = (selectedProduct.price * selectedProduct.discount) / 100%>
+                                    <s><%=selectedProduct.price.toFixed(2)%></s>
+                                    <%=newPrice.toFixed(2)%> JD
+                                        <%} else {%>
+                                            <%=selectedProduct.price.toFixed(2)%> JD
+                                                <%}%>
+                        </h2>
+                        <%if(selectedProduct.qty !== 0 && selectedProduct.qty){%>
+                            <h3 class="product-in-stock">
+                                In Stock
+                            </h3>
+                            <%} else {%>
+                                <h3 class="product-out-of-stock">
+                                    Out Of Stock
+                                </h3>
+                                <%}%>
+
+
+                    </div>
+
+                </div>
+            </div>
+            <h2 id="recommended">You can also check</h2>
+            <div class="flex-child check-out-container ">
+                <%for(let index = 0 ; index <= 24 && index < randomCards.length ; index++){%>
+                    <div onclick="location.href='/product/<%=checkProducts[randomCards[index]].id%>';" class="product ">
+                        <%console.log(index)%>
+                            <%if(checkProducts[randomCards[index]].image){%>
+                                <img src="../../uploads/images/<%=checkProducts[randomCards[index]].image%>" alt="">
+                                <%} else {%>
+                                    <img src="../../uploads/images/no_image.jpg" alt=" " style="width: 100%; max-height: 30vh; border-bottom: black solid 1px; ">
+                                    <%}%>
+                                        <p class="product-name ">
+                                            <%=checkProducts[randomCards[index]].product%>
+                                        </p>
+                                        <% if(checkProducts[randomCards[index]].qty !== 0 && checkProducts[randomCards[index]].qty !== null) {%>
+                                            <div class="in-box ">
+                                                <p class="in-stock ">In Stock</p>
+                                            </div>
+                                            <% } else {%>
+                                                <div class="out-box ">
+                                                    <p class="out-stock ">Out Of Stock</p>
+                                                </div>
+                                                <% } %>
+                                                    <p class="price-tag ">
+                                                        <%=checkProducts[randomCards[index]].price.toFixed(2)%> JD
+                                                    </p>
+                    </div>
+                    <%}%>
+
+            </div>
+        </div>
+
+
+
+
+        <%- include('../partials/footer.ejs') %>
+
+            <%- include('../partials/javacode.ejs') %>
+</body>
+
+</html>

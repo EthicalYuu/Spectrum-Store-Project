@@ -1,0 +1,85 @@
+body {
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    background-color: #EA5455;
+    padding-top: 20px;
+    padding-bottom: 5vh;
+    min-height: 100vh;
+}
+
+.btn-group {
+    float: right;
+}
+
+.btn-group-container {
+    margin-bottom: 60px;
+}
+
+.info-container {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 10px auto;
+    height: 13vh;
+}
+
+.info-container:hover {
+    transform: scale(1.01);
+}
+
+.product-id {
+    font-family: 'comfortaa', cursive;
+    opacity: 0.9;
+    font-size: 1.2em;
+    margin-bottom: 0px;
+}
+
+.button-container {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+}
+
+.update-btn {
+    width: 100px;
+    height: 37px;
+    margin-left: 325px;
+    display: block;
+}
+
+.delete-btn {
+    width: 100px;
+    height: 37px;
+    margin-left: 325px;
+    display: block;
+}
+
+.product-name {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 1.6em;
+}
+
+.price {
+    font-size: 1.5em;
+    color: #85bb65;
+    font-family: 'Russo One', sans-serif;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.category {
+    font-size: 1.5em;
+    font-family: 'Russo One', sans-serif;
+    text-align: center;
+}

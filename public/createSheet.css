@@ -1,0 +1,43 @@
+.container {
+    background-color: #EA5455;
+    height: 110vh;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.create-container {
+    background-color: white;
+    border: black solid 0px;
+    border-radius: 30px;
+    padding-top: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 130px;
+}
+
+.header {
+    margin-bottom: 25px;
+    margin-left: 10px;
+}
+
+.button-container {
+    width: 100%;
+}
+
+.addButton {
+    margin-top: 35px;
+    margin-right: 5px;
+    float: right;
+}
+
+.updateButton {
+    margin-top: 35px;
+    margin-right: 5px;
+    float: right;
+}
+
+.backButton {
+    margin-top: 35px;
+    margin-left: 15px;
+    float: left;
+}

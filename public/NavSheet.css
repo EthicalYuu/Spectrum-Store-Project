@@ -1,0 +1,32 @@
+#spectrum-nav-bar {
+    background-color: #EA5455;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    color: #2D4059;
+}
+
+.navbar-brand {
+    color: white;
+    margin-left: 20px;
+}
+
+.navbar-brand:hover {
+    color: #2D4059;
+}
+
+#nav-btn {
+    background-color: white;
+}
+
+.navbar-toggler {
+    background-color: white;
+}
+
+.navbar-toggler-icon {
+    background-color: black;
+}

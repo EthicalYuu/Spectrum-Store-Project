@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('../partials/head.ejs') %>
+        <link rel="stylesheet" href="/NavSheet.css">
+        <link rel="stylesheet" href="/CategorySheet.css">
+        <link rel="stylesheet" href="/createSheet.css">
+        <link>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+        <title>Store Database</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="create-container">
+            <h1 class="header">Create new product</h1>
+
+
+            <form action="/db/create" method="POST" enctype="multipart/form-data">
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Product Name</span>
+                    <input type="text" id="product" name="product" class="form-control" aria-label="Username" aria-describedby="basic-addon1" required>
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">price</span>
+                    <input type="number" name="price" class="form-control" aria-label="Username" aria-describedby="basic-addon1" min="0" step="0.05" required>
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Discount</span>
+                    <input type="number" name="discount" class="form-control" aria-label="Username" aria-describedby="basic-addon1" min="0" step="0.05">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Company Name</span>
+                    <input type="text" name="co" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Quantity</span>
+                    <input type="number" name="qty" class="form-control" aria-label="Username" aria-describedby="basic-addon1" min="0">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Description</span>
+                    <textarea class="form-control" name="desc" aria-label="With textarea "></textarea>
+                </div>
+
+                <div class="input-group mb-3 ">
+                    <span class="input-group-text " id="basic-addon1 ">Category</span>
+                    <input type="text " name="cat" class="form-control " aria-label="Text input with dropdown button " required>
+                </div>
+
+                <div class="input-group mb-3 ">
+                    <span class="input-group-text " id="basic-addon1 ">Made In (Country)</span>
+                    <input type="text" name="country" class="form-control " aria-label="Username " aria-describedby="basic-addon1 ">
+                </div>
+
+                <div class="input-group mb-3 ">
+                    <input type="file" name="image" class="form-control " aria-label="Username " aria-describedby="basic-addon1 " required>
+                </div>
+
+                <div class="button-container ">
+                    <button type="button " class="btn btn-primary addButton ">Create Item</button>
+                </div>
+            </form>
+            <a href="/db/list"><button type="button " class="btn btn-primary backButton ">Back To Database</button></a>
+
+        </div>
+    </div>
+
+    <%- include( '../partials/javacode.ejs') %>
+</body>
+
+</html>

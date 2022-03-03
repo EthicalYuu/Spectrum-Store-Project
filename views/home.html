@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/js/bootstrap.min.js">
+    <link rel="stylesheet" href="StoreSheet.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <title>Spectrum</title>
+</head>
+
+<body>
+    <!-- Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar-->
+    <nav class="navbar navbar-expand-lg" id="spectrum-nav-bar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="http://localhost:3000/home">Spectrum</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li> -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Computer & Laptops
+              </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                            <li><a class="dropdown-item" href="http://localhost:3000/category/pc/1">Prebuilt PCs</a></li>
+                            <li><a class="dropdown-item" href="http://localhost:3000/category/laptop/1">Laptops</a></li>
+                            <li><a class="dropdown-item" href="http://localhost:3000/category/gpu/1">Graphics cards (GPUs)</a></li>
+                            <li><a class="dropdown-item" href="http://localhost:3000/category/cpu/1">Proccessors (CPUs)</a></li>
+                            <li><a class="dropdown-item" href="http://localhost:3000/category/drive/1">HDD & SSD (Storage)</a></li>
+                            <li><a class="dropdown-item" href="http://localhost:3000/category/screen/1">PC Screens</a></li>
+                            <li><a class="dropdown-item" href="http://localhost:3000/category/ps/1">Power Supplies</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                PC Accessories
+              </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Keyboard & Mouse</a></li>
+                            <li><a class="dropdown-item" href="#">Controllers</a></li>
+                            <li><a class="dropdown-item" href="#">Printers</a></li>
+                            <li><a class="dropdown-item" href="#">Headphones</a></li>
+                            <li><a class="dropdown-item" href="#">Chargers & Cables</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Electronics
+              </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Resistors</a></li>
+                            <li><a class="dropdown-item" href="#">Capacitors</a></li>
+                            <li><a class="dropdown-item" href="#">Wiring</a></li>
+                            <li><a class="dropdown-item" href="#">Insulators</a></li>
+                            <li><a class="dropdown-item" href="#">Diodes</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Mobile Devices
+              </a>
+                        <ul class="dropdown-menu fade-up" aria-labelledby="navbarDropdown">
+
+                            <li><a class="dropdown-item" href="#">Android Devices</a></li>
+                            <li><a class="dropdown-item" href="#">IOS Devices</a></li>
+                            <li><a class="dropdown-item" href="#">Huawei Devices</a></li>
+                            <li><a class="dropdown-item" href="#">Phone Covers</a></li>
+                            <li><a class="dropdown-item" href="#">Chargers</a></li>
+                            <li><a class="dropdown-item" href="#">Earphones</a></li>
+                            <li><a class="dropdown-item" href="#">Speakers</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <form class="d-flex" action="/db/search/" method="GET">
+                    <input id="search-bar" class="form-control me-2" type="search" placeholder="I'm looking for..." aria-label="Search" name="q" required>
+                    <button id="nav-button" class="btn" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar  -->
+
+
+    <!-- Container Container Container Container Container Container Container Container Container Container Container Container -->
+    <div class="container">
+
+        <div class="contact-information">
+            <div class="quote">Good company in a journey makes the way seem shorter.
+            </div>
+        </div>
+        <!-- Slides Slides Slides Slides Slides Slides Slides Slides Slides Slides Slides Slides Slides Slides Slides Slides Slides Slides Slides Slides -->
+
+        <div class="slides-container">
+            <div class="slides">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active slide-img">
+                            <img src="https://www.worldbank.org/content/dam/photos/780x439/2017/dec/tj-mountains-nature-780x439.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item slide-img">
+                            <img src="https://www.travelmanagers.com.au/wp-content/uploads/2012/08/AdobeStock_254529936_Railroad-to-Denali-National-Park-Alaska_750x500.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item slide-img">
+                            <img src="https://cdn.cnn.com/cnnnext/dam/assets/191111145001-09-highest-mountains-world-photos-full-169.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slides Slides Slides Slides Slides Slides Slides Slides Slides Slides Slides Slides Slides Slides Slides Slides Slides Slides Slides Slides -->
+
+
+
+
+        <h2 id="recently-add">Recently Added</h2>
+
+        <div class="scrolling-wrapper row flex-row flex-nowrap mt-4 pb-4 pt-2">
+
+            <% for(let index = allProducts.length - 1; index >= 0; index--){ %>
+                <div onclick="location.href='/product/<%=allProducts[index].id%>';" class="card">
+                    <%if(allProducts[index].image){%>
+                        <img src="uploads/images/<%=allProducts[index].image%>" alt=" " class="card-img-top" ">
+                        <%} else {%>
+                            <img src="uploads/images/no_image.jpg " alt=" " class="card-img-top "">
+                        <%}%>
+                            <div class="card-body ">
+                                <p class="product-name ">
+                                    <%= allProducts[index].product %>
+                                </p>
+
+                                <% if(allProducts[index].qty !== 0 && allProducts[index].qty) {%>
+                                    <div class="in-box ">
+                                        <p class="in-stock ">In Stock</p>
+                                    </div>
+                                    <% } else {%>
+                                        <div class="out-box ">
+                                            <p class="out-stock ">Out Of Stock</p>
+                                        </div>
+                                        <% } %>
+
+
+                                            <p class="price-tag ">
+                                                <%= allProducts[index].price.toFixed(2) %> JD</p>
+
+                            </div>
+
+                </div>
+                <%}%>
+
+
+        </div>
+        <hr>
+        <h2 id="most-viewed">Most Viewed</h2>
+
+        <div class="scrolling-wrapper row flex-row flex-nowrap mt-4 pb-4 pt-2 ">
+
+
+            <% for(let index = 0 ; index < mostViewed.length ; index++){ %>
+                <div onclick="location.href='/product/<%=mostViewed[index]._id%>' " class="card ">
+                    <%if(mostViewed[index].image){%>
+                        <img src="uploads/images/<%=mostViewed[index].image%>" alt=" " class="card-img-top" ">
+                            <%} else {%>
+                                <img src="uploads/images/no_image.jpg " alt=" " class="card-img-top "">
+                        <%}%>
+                            <div class="card-body ">
+                                <p class="product-name ">
+                                    <%= mostViewed[index].product %>
+                                </p>
+
+                                <% if(mostViewed[index].qty !== 0 && mostViewed[index].qty) {%>
+                                    <div class="in-box ">
+                                        <p class="in-stock ">In Stock</p>
+                                    </div>
+                                    <% } else {%>
+                                        <div class="out-box ">
+                                            <p class="out-stock ">Out Of Stock</p>
+                                        </div>
+                                        <% } %>
+
+
+                                            <p class="price-tag ">
+                                                <%= mostViewed[index].price.toFixed(2) %> JD</p>
+
+                            </div>
+
+                </div>
+                <%}%>
+
+
+        </div>
+        <hr>
+
+        <h2 id="discounts">Discounts</h2>
+        <div class="scrolling-wrapper row flex-row flex-nowrap mt-4 pb-4 pt-2 ">
+            <%for(let index = 0 ; index<allProducts.length ; index++){%>
+                <%if(allProducts[index].isDiscount === true) {%>
+                    <div onclick="location.href='/product/<%=allProducts[index].id%>' ; " class="card ">
+                        <img src="../uploads/images/<%=allProducts[index].image%>" class="card-img-top " alt="... ">
+                        <div class="card-body ">
+                            <p class="product-name ">
+                                <%=allProducts[index].product%>
+                            </p>
+                            <% if(allProducts[index].qty !== 0 && allProducts[index].qty) {%>
+                                <div class="in-box ">
+                                    <p class="in-stock ">In Stock</p>
+                                </div>
+                                <% } else {%>
+                                    <div class="out-box ">
+                                        <p class="out-stock ">Out Of Stock</p>
+                                    </div>
+                                    <% } %>
+                                        <p class="price-tag ">
+
+                                            <%let newPrice = (allProducts[index].price * allProducts[index].discount) / 100%>
+                                                <s><%=allProducts[index].price.toFixed(2)%></s>
+                                                <%=newPrice.toFixed(2)%> JD
+                                        </p>
+
+                        </div>
+
+                    </div>
+                    <%}%>
+                        <%}%>
+
+        </div>
+
+        <h2 id="interested">You might also be interested in</h2>
+
+
+        <div class="flex-child check-out-container ">
+            <% for(let index = 0; index <= 24 ; index++){ %>
+
+                <div onclick="location.href='/product/<%=allProducts[randomCards[index]].id%>' ; " class=" product ">
+                    <%if(allProducts[randomCards[index]].image){%>
+                        <img src="uploads/images/<%=allProducts[randomCards[index]].image%>" alt=" " style="width: 100%; max-height: 25.4vh; border-bottom: black solid 1px; ">
+                        <%} else {%>
+                            <img src="uploads/images/no_image.jpg" alt=" ">
+                            <%}%>
+                                <p class=" product-name ">
+                                    <%= allProducts[randomCards[index]].product %>
+                                </p>
+                                <% if(allProducts[randomCards[index]].qty !== 0 && allProducts[randomCards[index]].qty) {%>
+                                    <div class="in-box ">
+                                        <p class="in-stock ">In Stock</p>
+                                    </div>
+                                    <% } else {%>
+                                        <div class="out-box ">
+                                            <p class="out-stock ">Out Of Stock</p>
+                                        </div>
+                                        <% } %>
+                                            <p class="price-tag ">0.00 JD</p>
+                </div>
+
+                <% } %>
+
+
+        </div>
+
+
+        <div class="google-map ">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3385.074653067912!2d35.915888815116695!3d31.958871381226842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151b5fed54728fd1%3A0x67329b1319459f0c!2z2LnZhdin2LHYqSDYp9mE2LXYp9mK2Log2KfZhNi52KjYr9mE2YotINin2YTZg9iq2LHZiNmG2YrYp9iq!5e0!3m2!1sen!2sjo!4v1624188030921!5m2!1sen!2sjo "
+                width="600 " height="350 " style="border:0; " allowfullscreen=" " loading="lazy "></iframe>
+        </div>
+    </div>
+
+
+    <div class="footer-container container " style="padding-left: 0px; ">
+        <div class="footer ">
+            <div class="footer-heading footer-1 ">
+                <h2>INFORMATION</h2>
+                <a href="# ">Contact Us</a>
+                <a href="# ">Privacy Policy</a>
+                <a href="# ">Terms & Conditions</a>
+
+            </div>
+            <div class="footer-heading footer-2 ">
+                <h2>FOLLOW US</h2>
+                <a href="# ">Facebook</a>
+                <a href="# ">Instagram</a>
+                <a href="# ">Youtube</a>
+            </div>
+            <div class="footer-heading footer-3 ">
+                <h2>WORKING HOURS</h2>
+                <p class="working-hours ">Available Sunday-Thursday <br> from 10am-11pm
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js " integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js " integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT " crossorigin="anonymous "></script>
+</body>
+
+</html>

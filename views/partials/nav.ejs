@@ -1,0 +1,71 @@
+<nav class="navbar navbar-expand-lg" id="spectrum-nav-bar">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="http://localhost:3000/home">Spectrum</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Computer & Laptops
+          </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                        <li><a class="dropdown-item" href="http://localhost:3000/category/pc/1">Prebuilt PCs</a></li>
+                        <li><a class="dropdown-item" href="http://localhost:3000/category/laptop/1">Laptops</a></li>
+                        <li><a class="dropdown-item" href="http://localhost:3000/category/gpu/1">Graphics cards (GPUs)</a></li>
+                        <li><a class="dropdown-item" href="http://localhost:3000/category/cpu/1">Proccessors (CPUs)</a></li>
+                        <li><a class="dropdown-item" href="http://localhost:3000/category/drive/1">HDD & SSD (Storage)</a></li>
+                        <li><a class="dropdown-item" href="http://localhost:3000/category/screen/1">PC Screens</a></li>
+                        <li><a class="dropdown-item" href="http://localhost:3000/category/ps/1">Power Supplies</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            PC Accessories
+          </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Keyboard & Mouse</a></li>
+                        <li><a class="dropdown-item" href="#">Controllers</a></li>
+                        <li><a class="dropdown-item" href="#">Printers</a></li>
+                        <li><a class="dropdown-item" href="#">Headphones</a></li>
+                        <li><a class="dropdown-item" href="#">Chargers & Cables</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Electronics
+          </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Resistors</a></li>
+                        <li><a class="dropdown-item" href="#">Capacitors</a></li>
+                        <li><a class="dropdown-item" href="#">Wiring</a></li>
+                        <li><a class="dropdown-item" href="#">Insulators</a></li>
+                        <li><a class="dropdown-item" href="#">Diodes</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Mobile Devices
+          </a>
+                    <ul class="dropdown-menu fade-up" aria-labelledby="navbarDropdown">
+
+                        <li><a class="dropdown-item" href="#">Android Devices</a></li>
+                        <li><a class="dropdown-item" href="#">IOS Devices</a></li>
+                        <li><a class="dropdown-item" href="#">Huawei Devices</a></li>
+                        <li><a class="dropdown-item" href="#">Phone Covers</a></li>
+                        <li><a class="dropdown-item" href="#">Chargers</a></li>
+                        <li><a class="dropdown-item" href="#">Earphones</a></li>
+                        <li><a class="dropdown-item" href="#">Speakers</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+            <form class="d-flex" action="/db/search/" method="GET">
+                <input id="search-bar" class="form-control me-2" type="search" placeholder="I'm looking for..." aria-label="Search" name="q" required>
+                <button class="btn" type="submit" style="background-color: white;">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>

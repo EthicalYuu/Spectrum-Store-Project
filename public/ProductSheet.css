@@ -1,0 +1,248 @@
+body {
+    background-color: black;
+}
+
+.container {
+    background-color: #FFF;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.product-info {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: 1fr;
+    width: 95%;
+    min-height: 50vh;
+    border: solid black 1px;
+    border-radius: 10px;
+    margin: 0 auto;
+    /* box-shadow: #EA5455 0px 5px 15px; */
+}
+
+.product-img {
+    /* border: solid brown 8px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-lap {
+    max-width: 400px;
+    max-height: 200px;
+}
+
+.product-description {
+    border-left: solid black 1px;
+    display: inline-block;
+}
+
+.product-name-description {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+.product-price-description {
+    display: inline-block;
+    text-align: center;
+    margin-right: 40px;
+    font-size: 30px;
+    margin-bottom: 25px;
+    color: #11874F;
+}
+
+.product-country-description {
+    display: inline-block;
+}
+
+.product-in-stock {
+    display: inline-block;
+    color: #0275d8;
+}
+
+.product-out-of-stock {
+    display: inline-block;
+    color: #E53935;
+}
+
+.details-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.desc-container {
+    padding-top: 170px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+    min-height: 40vh;
+}
+
+.product-desc {
+    text-align: center;
+}
+
+#recommended {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    margin-left: 15px;
+}
+
+.check-out-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(20, 1fr);
+    gap: 5px;
+    flex: 0.78;
+    height: 289vh;
+    padding: 4px 4px;
+    background-color: #EA5455;
+}
+
+.check-out-container img {
+    width: 100%;
+    height: 25.4vh;
+    object-fit: cover;
+}
+
+.product {
+    display: inline-block;
+    height: 57vh;
+    background-color: white;
+}
+
+.product:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+}
+
+.product-img {
+    width: 100%;
+    max-height: 30vh;
+    border-bottom: black solid 1px;
+}
+
+.product-img img {
+    object-fit: cover;
+}
+
+.product-name {
+    text-align: center;
+    font-family: 'Roboto Slab';
+    font-size: 1.05em;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.in-stock {
+    text-align: center;
+    align-content: center;
+    color: white;
+}
+
+.out-stock {
+    text-align: center;
+    align-content: center;
+    color: white;
+}
+
+.in-box {
+    border: black solid 1px;
+    border-radius: 2px;
+    background-color: #0275d8;
+    width: 80px;
+    height: 30px;
+    margin: 0 auto;
+}
+
+.out-box {
+    border: black solid 1px;
+    border-radius: 2px;
+    background-color: #E53935;
+    width: 110px;
+    height: 30px;
+    margin: 0 auto;
+}
+
+.box {
+    border: black solid 1px;
+    border-radius: 2px;
+    background-color: #0275d8;
+    width: 80px;
+    height: 30px;
+    margin: 0 auto;
+}
+
+.in-stock {
+    text-align: center;
+    align-content: center;
+    color: white;
+}
+
+.price-tag {
+    margin-top: 15px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Ruso One';
+    color: #85bb65;
+}
+
+.flex-child:first-child {
+    margin-right: 20px;
+}
+
+.price-input {
+    width: 250px;
+}
+
+.footer-container {
+    background-color: #f05454;
+    padding: 4rem 0 4rem 0;
+}
+
+.footer {
+    width: 80%;
+    height: 30vh;
+    background-color: #f05454;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.footer-heading {
+    display: flex;
+    flex-direction: column;
+    margin-right: 4rem;
+}
+
+.footer-heading h2 {
+    margin-bottom: 2rem;
+}
+
+.footer-heading a {
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.footer-heading a:hover {
+    color: #2D4059;
+    transition: 0.3s ease-out;
+}
+
+a {
+    text-decoration: none;
+}
+
+.working-hours {
+    text-align: center;
+}

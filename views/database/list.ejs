@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('../partials/head.ejs') %>
+        <link rel="stylesheet" href="/NavSheet.css">
+        <link rel="stylesheet" href="/listSheet.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
+        <title>Products List</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="btn-group-container">
+            <div class="btn-group" role="group" aria-label="Basic example">
+
+                <!-- <a href=""><button type="button" class="btn btn-primary">Create a product</button></a>
+                <a href=""><button type="button" class="btn btn-primary">Go to home screen</button></a> -->
+                <button onclick="location.href='/db/create';" type="button" class="btn" style="background-color: white;">Create a product</button>
+                <button onclick="location.href='/home';" type="button" class="btn" style="background-color: white; margin-left: 2px;">Go to home screen</button>
+
+            </div>
+        </div>
+        <% for(let product of allProducts) {%>
+            <div class="info-container">
+                <div>
+                    <p class="product-id">product id:
+                        <%= product.id %>
+                    </p>
+                    <p class="product-name">product name:
+                        <%= product.product %>
+                    </p>
+
+                </div>
+                <div class="price-container">
+                    <p class="price">
+
+                        <%=product.price %> JOD
+                    </p>
+                    <p class="category">
+                        <%= product.cat %>
+                    </p>
+                </div>
+                <div class="button-container">
+                    <a href="http://localhost:3000/db/update/<%=product.id%>"><button type="button" class="btn btn-warning update-btn">Update</button></a>
+                    <a href="http://localhost:3000/db/delete/<%=product.id%>?_method=DELETE" method="POST">
+                        <button type="button" class="btn btn-danger delete-btn">Delete</button>
+                    </a>
+                </div>
+            </div>
+
+            <% } %>
+    </div>
+</body>
+
+</html>

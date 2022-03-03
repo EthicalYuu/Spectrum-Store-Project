@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.ejs') %>
+        <link rel="stylesheet" href="/NavSheet.css">
+        <link rel="stylesheet" href="/CategorySheet.css">
+        <link rel="stylesheet" href="/ContactSheet.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+        <title>Spectrum PC</title>
+</head>
+
+<body>
+    <%- include('../partials/nav.ejs') %>
+        <div class="container">
+            <div class="flex-container">
+
+                <div class="flex-child product-type-container">
+                    <%if(companies.length !== 0){%>
+                        <div class="title">
+                            Company Name
+                        </div>
+                        <%}%>
+                            <%for(let index = 0 ; index<companies.length ; index++){%>
+                                <%if(companies[index]!='' && companies[index]){%>
+                                    <div onclick="location.href='/category/<%=device_name%>/<%=companies[index]%>/1' " class="product-type">
+                                        <%=companies[index]%>
+                                    </div>
+                                    <%}%>
+                                        <%}%>
+                                            <div class="title">
+                                                Price
+                                            </div>
+
+
+                                            <div class="price-container">
+                                                <div>
+                                                    <label class="price-element" for="minField">From</label>
+                                                    <input class="price-element" type="Number" min="0" id="minField">
+                                                    <label class="price-element" for="maxField">To</label>
+                                                    <input class="price-element" type="Number" min="0" id="maxField">
+                                                    <button class="price-element" id="search-btn" onclick="minAndMax()">Search</button>
+                                                </div>
+                                            </div>
+                </div>
+
+                <div style="width: 100%;">
+                    <div class="flex-child product-container">
+                        <%if(page === 1){var index = 0; var breakpoint = 16;} else{
+                            var index = 16 * (page-1); var breakpoint = 16 * page;}
+                            for(index ; index < breakpoint && index < productByCat.length ; index++) {%>
+                            <div onclick="location.href='/product/<%=productByCat[index].id%>';" class="product">
+                                <img src="../../../uploads/images/<%=productByCat[index].image%>" alt="">
+                                <p class="product-name">
+                                    <%=productByCat[index].product%>
+                                </p>
+                                <% if(productByCat[index].qty !== 0 && productByCat[index].qty) {%>
+                                    <div class="in-box ">
+                                        <p class="in-stock ">In Stock</p>
+                                    </div>
+                                    <% } else {%>
+                                        <div class="out-box ">
+                                            <p class="out-stock ">Out Of Stock</p>
+                                        </div>
+                                        <% } %>
+                                            <p class="price-tag">
+                                                <%= productByCat[index].price.toFixed(2) %> JD</p>
+                            </div>
+                            <%}%>
+                    </div>
+                    <nav class="page-nav" aria-label="Page navigation example" style="display: block;">
+                        <ul class="pagination">
+                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                            <%for(let i = 1 ; i<=Math.ceil(productByCat.length/16) ; i++){%>
+                                <li class="page-item">
+                                    <a class="page-link" href="http://localhost:3000/category/<%=device_name%>/<%=company%>/<%=i%>">
+                                        <%=i%>
+                                    </a>
+                                </li>
+                                <%}%>
+                                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+        </div>
+        <%- include('../partials/footer.ejs') %>
+
+            <%- include('../partials/javacode.ejs') %>
+
+                <script>
+                    let minVal = document.getElementById("minField");
+                    let maxVal = document.getElementById("maxField");
+
+                    function minAndMax() {
+                        min_Price = minVal.value;
+                        max_Price = maxVal.value;
+                        if (min_Price && max_Price) {
+                            window.location.replace(/category/ + "<%=device_name%>/<%=page%>" + '?min_Price=' + min_Price + '&max_Price=' + max_Price);
+                        } else {
+                            alert("Please enter two values");
+                        }
+                    }
+                </script>
+</body>
+
+</html>
